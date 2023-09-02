@@ -2,51 +2,121 @@
   --color-brand: #fd9222;
   --color-primary: #111;
   --color-primary-light: #fff;
+  --color-primary-tr: #ffffffb2;
   --color-background-darck: #1e1823;
   --color-background-light: #fafafa;
 }
-.logo {
+body {
   color: var(--color-primary);
+  font-family: Montserat, sans-serif;
+  background-color: var(--color-background-light);
+  font-size: 14px;
 }
-.nav-link {
-  color: var(--color-primary);
+/*Global*/
+a {
+  text-decoration: none;
 }
-.nav-link:hover {
-  color: var(--color-brand);
+ul {
+  list-style-type: none;
 }
-.hero-section {
-  background-color: var(--color-background-darck); /*replase with image*/
+button {
+  font-family: inherit;
 }
-.hero-title {
-  color: var(--color-primary-light);
+.visually-hidden {
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
 }
 .button-primary {
+  font-family: inherit;
   color: var(--color-primary-light);
   background-color: var(--color-brand);
   cursor: pointer;
   border: none;
   border-radius: 100px;
   padding: 14px 40px;
+  font-weight: 600;
+  line-height: 1.21;
 }
 .button-primary:hover {
   color: var(--color-brand);
   background-color: #fcf1e0;
 }
+/*header*/
+.logo {
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px; /* 111.111% */
+  letter-spacing: -0.54px;
+  text-transform: uppercase;
+}
+.logo-accent {
+  font-style: italic;
+}
+.nav-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.nav-link:hover {
+  color: var(--color-brand);
+}
+/*END header*/
 
-.button-secondary {
+/*hero section*/
+.hero-section {
+  background-color: var(--color-background-darck); /*replase with image*/
+}
+.hero-title {
+  color: var(--color-primary-light);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 0.03em;
+}
+
+.button-hero {
   color: var(--color-primary-light);
   border: 1px solid currentColor;
   border-radius: 100px;
   padding: 14px 40px;
+  font-weight: 600;
+  line-height: 1.21;
 }
 
-.button-secondary:hover {
+.button-hero:hover {
   color: var(--color-brand);
 }
 .hero-scroll-down {
   color: var(--color-primary-light);
+  font-family: Montserrat;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
 }
 
 .hero-scroll-down:hover {
   color: var(--color-brand);
+}
+/*END hero section*/
+
+/*advatage section*/
+.advantages-fon {
+  background-color: var(--color-background-darck);
+}
+.advantages-title {
+  color: var(--color-primary-light);
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.advantages-text {
+  color: var(--color-primary-tr);
+  font-weight: 400;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
 }
