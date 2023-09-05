@@ -17,10 +17,22 @@ a {
   text-decoration: none;
 }
 ul {
+  padding-inline-start: 0;
   list-style-type: none;
+  margin: 0;
 }
 button {
   font-family: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }
 .visually-hidden {
   height: 1px;
@@ -41,6 +53,15 @@ button {
 .button-primary:hover {
   color: var(--color-brand);
   background-color: #fcf1e0;
+}
+.section {
+  padding: 64px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 /*header*/
 .logo {
@@ -67,14 +88,17 @@ button {
 
 /*hero section*/
 .hero-section {
+  padding: 380px 0 40px;
   background-color: var(--color-background-darck); /*replase with image*/
 }
 .hero-title {
+  margin-bottom: 32px;
+  max-width: 484px;
   color: var(--color-primary-light);
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em; 
 }
 
 .button-hero {
@@ -104,7 +128,13 @@ button {
 
 /*advatage section*/
 .advantages-fon {
+  padding: 50px 0;
   background-color: var(--color-background-darck);
+}
+.advantages-icon {
+  margin-bottom: 22px;
+  border: 1px solid var(--color-primary-tr);
+  border-radius: 50%;
 }
 .advantages-title {
   color: var(--color-primary);
