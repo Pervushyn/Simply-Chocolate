@@ -13,6 +13,9 @@ body {
   font-size: 14px;
 }
 /*Global*/
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
@@ -59,6 +62,17 @@ h6 {
 .section {
   padding: 64px 0;
 }
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
 img {
   display: block;
   max-width: 100%;
@@ -83,6 +97,15 @@ img {
 .header-socials {
   display: flex;
   gap: 18px;
+}
+.header-socials-link {
+  stroke: var(--color-primary);
+  fill: none;
+  transition: stroke 0.2s;
+}
+
+.header-socials-link:hover {
+  stroke: var(--color-brand);
 }
 .header-nav {
   display: flex;
@@ -131,6 +154,10 @@ img {
   padding: 380px 40px 40px;
   background-color: var(--color-background-darck); /*replase with image*/
   border-radius: 30px;
+  background-image: url(../images/chocolate-fon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -141,10 +168,11 @@ img {
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: 0.03em;
+  margin-bottom: 32px;
 }
 .hero-actions {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   align-items: center;
 }
 .button-hero {
@@ -159,7 +187,11 @@ img {
 .button-hero:hover {
   color: var(--color-brand);
 }
-.hero-scroll-down {
+.scrol-arrow-link {
+  width: 38px;
+  height: 38px;
+}
+.hero-arrow {
   display: flex;
   gap: 14px;
   margin-left: auto;
@@ -169,6 +201,35 @@ img {
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: -0.03em;
+}
+
+.hero-arrow:hover {
+  color: var(--color-brand);
+}
+
+.hero-arrow-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  fill: var(--color-brand);
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  animation: bounce 1.5s infinite reverse;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.hero-arrow:hover .hero-arrow-link {
+  fill: var(--color-primary);
 }
 
 .hero-scroll-down:hover {
@@ -181,10 +242,22 @@ img {
   padding: 50px 0;
   background-color: var(--color-background-darck);
 }
-.advantages-icon {
+.advantage-icon {
+  width: 62px;
+  height: 62px;
   margin-bottom: 22px;
   border: 1px solid var(--color-primary-tr);
   border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--color-brand);
+}
+.box {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .advantages-title {
   margin-bottom: 18px;
@@ -211,16 +284,6 @@ img {
 /*END advatage section*/
 
 /*ingridients-section*/
-
-.ingridients-title {
-  text-align: center;
-  margin-bottom: 28px;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.16;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-}
 
 .ingridients-subtitle {
   text-align: center;
@@ -278,3 +341,34 @@ img {
 }
 
 /*END video-section*/
+
+/*Produkts section*/
+
+/*END Produkts section*/
+
+/*Reviews section*/
+.reviews-list {
+  display: flex;
+  gap: 28px;
+}
+.reviews-item {
+  flex-basis: calc((100% -56px) / 3);
+}
+
+.review {
+  position: relative;
+  padding: 56px 24px 42px;
+  text-align: center;
+  border: 1px solid var(--color-primary-tr);
+  background-color: var(--color-background-light);
+  box-shadow: 0px 9px 26px 0px rgba(215, 228, 249, 0.25);
+  border-radius: 15px;
+}
+
+.review-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*END Reviews section*/

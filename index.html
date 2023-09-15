@@ -29,13 +29,10 @@
         <div class="header-inner">
           <nav class="header-nav">
             <a class="logo" href="./index.html"
-              ><span class="logo-accent">Simply</span> Chocolate
-              <img
-                src="./images/icons/chocolate.webp"
-                alt="logo"
-                width="24"
-                height="24"
-              />
+              ><span class="logo-accent">Simply</span>Chocolate
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-Vector"></use>
+              </svg>
             </a>
             <ul class="nav-list">
               <li>
@@ -56,15 +53,15 @@
             </ul>
           </nav>
           <div class="header-socials">
-            <a href="#" target="_blank">
-              <img
-                src="./images/icons/instagram.webp"
-                alt="instagram"
-                width="24"
-              />
+            <a class="header-socials-link" href="#" target="_blank"
+              ><svg width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
             </a>
-            <a href="#" target="_blank">
-              <img src="./images/icons/twitter.webp" alt="twitter" width="24" />
+            <a class="header-socials-link" href="#" target="_blank">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
             </a>
           </div>
         </div>
@@ -84,12 +81,16 @@
             <div class="hero-actions">
               <button class="button-primary" type="button">Buy now</button>
               <a class="button-hero" href="#">How it's made</a>
-              <a class="hero-scroll-down" href="#"
-                >scroll down<img
-                  src="./images/icons/arrow.webp"
-                  alt="scroll down"
-                  width="22"
-              /></a>
+              <a class="hero-arrow" href="#advantages-section"
+                >scroll down
+                <div class="hero-arrow-link">
+                  <svg width="22" height="22">
+                    <use
+                      href="./images/icons.svg#icon-fi-rr-angle-small-left"
+                    ></use>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -97,17 +98,18 @@
 
       <!--Advantages section-->
 
-      <section class="advantages-fon">
+      <section id="advantages-section" class="advantages-fon">
         <div class="container">
           <h2 class="visually-hidden">advantages</h2>
           <ul class="advantages-list">
             <li class="advantages-item">
-              <img
-                class="advantages-icon"
-                src="./images/icons/taste.webp"
-                alt="taste"
-                width="32"
-              />
+              <div class="advantage-icon">
+                <svg width="32" height="32">
+                  <use
+                    href="./images/icons.svg#icon-fluent-emoji-high-contrast_chocolate-bar"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="advantages-title">Unsurpassed taste</h3>
               <p class="advantages-text">
                 Crafted with the finest quality cocoa beans and a dedication to
@@ -117,12 +119,11 @@
               </p>
             </li>
             <li class="advantages-item">
-              <img
-                class="advantages-icon"
-                src="./images/icons/preis.webp"
-                alt="preis"
-                width="32"
-              />
+              <div class="advantage-icon">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#icon-Group"></use>
+                </svg>
+              </div>
               <h3 class="advantages-title">Affordable price</h3>
               <p class="advantages-text">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -133,12 +134,11 @@
               </p>
             </li>
             <li class="advantages-item">
-              <img
-                class="advantages-icon"
-                src="./images/icons/ownproduction.webp"
-                alt="production"
-                width="32"
-              />
+              <div class="advantage-icon">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#icon-la_utensil-spoon"></use>
+                </svg>
+              </div>
               <h3 class="advantages-title">Own production</h3>
               <p class="advantages-text">
                 We take pride in our own production process, ensuring that every
@@ -153,7 +153,7 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="ingridients-title">
+          <h2 class="section-title">
             It all adds up to one exceptional taste sensation
           </h2>
           <p class="ingridients-subtitle">
@@ -208,7 +208,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="media-title">how it's made?</h2>
+          <h2 class="section-title">how it's made?</h2>
           <div class="video-inner">
             <div class="video-media">
               <img
@@ -252,6 +252,119 @@
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+      <!--Produkts section-->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Our produkts</h2>
+          <ul class="produkts-list">
+            <li class="produkts-item">
+              <article class="produkt">
+                <img
+                  class="produkts-image"
+                  src="./images/Chocolade/orange (1).png"
+                  alt="Chocolade"
+                  width="230"
+                />
+                <h3 class="produkts-name">orange</h3>
+                <p class="produkts-description">Dark chocolate</p>
+                <span class="produkts-preis">45 uah</span>
+              </article>
+            </li>
+            <li class="produkts-item">
+              <article class="produkt">
+                <img
+                  class="produkts-image"
+                  src="./images/Chocolade/orange (1).png"
+                  alt="Chocolade"
+                  width="230"
+                />
+                <h3 class="produkts-name">orange</h3>
+                <p class="produkts-description">Dark chocolate</p>
+                <span class="produkts-preis">45 uah</span>
+              </article>
+            </li>
+            <li class="produkts-item">
+              <article class="produkt">
+                <img
+                  class="produkts-image"
+                  src="./images/Chocolade/orange (1).png"
+                  alt="Chocolade"
+                  width="230"
+                />
+                <h3 class="produkts-name">orange</h3>
+                <p class="produkts-description">Dark chocolate</p>
+                <span class="produkts-preis">45 uah</span>
+              </article>
+            </li>
+            <li class="produkts-item">
+              <article class="produkt">
+                <img
+                  class="produkts-image"
+                  src="./images/Chocolade/orange (1).png"
+                  alt="Chocolade"
+                  width="230"
+                />
+                <h3 class="produkts-name">orange</h3>
+                <p class="produkts-description">Dark chocolate</p>
+                <span class="produkts-preis">45 uah</span>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Reviews section-->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Chocolate is loved</h2>
+          <ul class="reviews-list">
+            <li class="reviews-item">
+              <div class="review">
+                <img
+                  class="review-image"
+                  src="./images/photo/Ellipse (1).png"
+                  alt="Victoria Dobrzhanska"
+                  width="80"
+                />
+                <h3 class="review-name">Victoria Dobrzhanska</h3>
+                <p class="review-description">
+                  I love this chocolate bar. Perfect combination of light crispy
+                  wafer, covered in a thin layer chocolate.
+                </p>
+              </div>
+            </li>
+            <li class="reviews-item">
+              <div class="review">
+                <img
+                  class="review-image"
+                  src="./images/photo/Ellipse (1).png"
+                  alt="Victoria Dobrzhanska"
+                  width="80"
+                />
+                <h3 class="review-name">Victoria Dobrzhanska</h3>
+                <p class="review-description">
+                  I love this chocolate bar. Perfect combination of light crispy
+                  wafer, covered in a thin layer chocolate.
+                </p>
+              </div>
+            </li>
+            <li class="reviews-item">
+              <div class="review">
+                <img
+                  class="review-image"
+                  src="./images/photo/Ellipse (1).png"
+                  alt="Victoria Dobrzhanska"
+                  width="80"
+                />
+                <h3 class="review-name">Victoria Dobrzhanska</h3>
+                <p class="review-description">
+                  I love this chocolate bar. Perfect combination of light crispy
+                  wafer, covered in a thin layer chocolate.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
