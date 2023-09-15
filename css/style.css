@@ -343,6 +343,37 @@ img {
 /*END video-section*/
 
 /*Produkts section*/
+.produkts-list {
+  display: flex;
+  gap: 18px;
+}
+.produkts-item {
+  flex-basis: calc((100%-54px) / 4);
+}
+.produkt-image {
+  position: relative;
+  overflow: hidden;
+}
+.produkt {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-background-light);
+  padding: 32px 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+.produkt-overlay {
+  position: absolute;
+  padding: 12px;
+  background-color: var(--color-brand);
+  color: var(--color-primary-light);
+  inset: 0;
+  transform: translateY(100%);
+  transition: transform 1s;
+}
+
+.produkt:hover .produkt-overlay {
+  transform: translateY(0);
+}
 
 /*END Produkts section*/
 
