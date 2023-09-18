@@ -325,7 +325,7 @@ img {
   flex-basis: calc((100% - 60px) / 4);
 }
 .ingridient {
-  border: 1px solid var(--color-brand);
+  border: 1px solid var(--color-primary);
   border-radius: 15px;
   padding: 28px;
 }
@@ -446,7 +446,7 @@ img {
   position: relative;
   padding: 56px 24px 26px;
   text-align: center;
-  border: 1px solid var(--color-brand);
+  border: 1px solid var(--color-primary);
   background-color: var(--color-background-light);
   box-shadow: 0px 9px 26px 0px rgba(215, 228, 249, 0.25);
   border-radius: 15px;
