@@ -5,6 +5,7 @@
   --color-primary-tr: #ffffffb2;
   --color-background-darck: #1e1823;
   --color-background-light: #fafafa;
+  --color-background-tr: #ffffffb2;
 }
 body {
   color: var(--color-primary);
@@ -83,6 +84,14 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
+}
+
+.accent-title {
+  color: var(--color-brand);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
 }
 /*header*/
 .header {
@@ -272,8 +281,21 @@ img {
   gap: 70px;
 }
 .advantages-item:not(:last-child) {
+  position: relative;
   padding-right: 18px;
-  border-right: 1px solid var(--color-primary-tr);
+}
+
+.advantages-item:not(:last-child)::after {
+  content: '';
+  transform: rotate(-90deg) translateX(50%);
+  background-color: var(--color-background-tr);
+  top: 50%;
+  right: 0;
+  width: 124px;
+  height: 1px;
+  color: var(--color-primary-tr);
+  position: absolute;
+  transform-origin: 100% 0;
 }
 .advantages-text {
   color: var(--color-primary-tr);
@@ -349,10 +371,12 @@ img {
 }
 .produkts-item {
   flex-basis: calc((100%-54px) / 4);
+  background-color: var(--color-background-light);
 }
 .produkt-image {
   position: relative;
   overflow: hidden;
+  margin-bottom: 8px;
 }
 .produkt {
   border: 1px solid var(--color-primary);
@@ -360,6 +384,38 @@ img {
   padding: 32px 20px;
   border-radius: 15px;
   text-align: center;
+  background-color: var(--color-background-tr);
+}
+.produkt-name {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.produkt-description {
+  margin-bottom: 18px;
+  color: rgba(17, 17, 17, 0.7);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+
+.produkt-preis {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: var(--color-background-light);
+  padding: 8px 20px;
 }
 .produkt-overlay {
   position: absolute;
@@ -388,14 +444,24 @@ img {
 
 .review {
   position: relative;
-  padding: 56px 24px 42px;
+  padding: 56px 24px 26px;
   text-align: center;
-  border: 1px solid var(--color-primary-tr);
+  border: 1px solid var(--color-brand);
   background-color: var(--color-background-light);
   box-shadow: 0px 9px 26px 0px rgba(215, 228, 249, 0.25);
   border-radius: 15px;
 }
+.review-name {
+  margin-bottom: 24px;
+}
 
+.review-description {
+  color: rgba(17, 17, 17, 0.7);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
 .review-image {
   position: absolute;
   top: 0;
