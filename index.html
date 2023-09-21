@@ -79,7 +79,9 @@
               moment of pure delight!
             </h1>
             <div class="hero-actions">
-              <button class="button-primary" type="button">Buy now</button>
+              <button class="button-primary" type="button" data-modal-open>
+                Buy now
+              </button>
               <a class="button-hero" href="#">How it's made</a>
               <a class="hero-arrow" href="#advantages-section"
                 >scroll down
@@ -408,5 +410,90 @@
       </section>
     </main>
     <footer></footer>
+
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>X</button>
+        <h2>Buy now</h2>
+        
+        <form name="contacn-form">
+          <fieldset>
+            <legend>Personal information</legend>
+            <div>
+              <label class="visually-hidden" for="user-name">Name</label>
+              <input
+                id="user-name"
+                type="text"
+                name="user-name"
+                placeholder="Name"
+                minlength="2"
+                maxlength="10"
+                required
+              />
+            </div>
+
+            
+            <div>
+              <label class="visually-hidden" for="user-email">Surname</label>
+              <input
+                  id="user-surname"
+                type="text"
+                name="user-surname"
+                placeholder="Surname"
+              />
+            </div>
+
+            <div>
+              <label for="user-email">Email</label>
+              <input
+                id="user-email"
+                type="email"
+                name="user-email"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div>
+              <label for="user-tel">Phone number</label>
+              <input
+                id="user-tel"
+                type="tel"
+                name="user-email"
+                placeholder="Phone number"
+              />
+            </div>
+
+            <div>
+              <label for="user-card-number">Card number</label>
+              <input
+                id="user-card-number"
+                type="number"
+                name="card-number"
+                placeholder="Enter card"
+              />
+            </div>
+          </fieldset>
+
+         
+
+          <fieldset>
+            <legend class="visually-hidden">Additional information</legend>
+            <div>
+            <label for="user-comment">Comment</label>
+            <textarea
+              id="user-comment"
+              name="user-comment"
+              placeholder="Ener text"
+            ></textarea>
+
+          </fieldset>
+          <Button type="submit">Submit</Button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
