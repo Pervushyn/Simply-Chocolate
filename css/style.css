@@ -348,9 +348,9 @@ fieldset {
   gap: 20px;
 }
 .video-backgraund {
-  height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  max-width: 600px;
 }
 .media-title {
   text-align: center;
@@ -363,14 +363,39 @@ fieldset {
 }
 
 .video-media {
+  display: inline-block; 
+  position: relative;
   flex-basis: calc((100% -20px) / 2);
 }
 .video-play {
-  display: none;
+  position: absolute;
+    top: 50%; /* Центрування по вертикалі */
+    left: 50%; /* Центрування по горизонталі */
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
 }
 .media-content {
   flex-basis: calc((100% -20px) / 2);
   padding: 32px;
+}
+.media-text-item :not(:last-child) {
+ margin-bottom: 24px; 
+}
+.media-text-title {
+  width: 350px;
+  color: var(--color-primary);
+font-size: 18px;
+font-weight: 600;
+line-height: 1.33; /* 133.333% */
+margin-bottom: 28px;
+letter-spacing: 0.04em;
+}
+.media-text {
+font-size: 14px;
+font-weight: 400;
+line-height: 1.29; /* 128.571% */
+letter-spacing: 0.02em;
 }
 
 /*END video-section*/
