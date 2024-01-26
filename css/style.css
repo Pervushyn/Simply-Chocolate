@@ -524,11 +524,14 @@ border: 1px solid rgba(17, 17, 17, 0.10);
 }
 .list-icons-main {
   fill: var(--color-brand);
+  width: 28px;
 }
 
 .list-icons-secondary {
   fill: rgba(17, 17, 17, 0.10);
 }
+
+
 /*END Produkts section*/
 
 /*Reviews section*/
