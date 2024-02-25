@@ -27,6 +27,7 @@ ul {
 }
 button {
   font-family: inherit;
+  margin: 0;
 }
 
 p,
@@ -60,6 +61,8 @@ h6 {
   padding: 14px 40px;
   font-weight: 600;
   line-height: 1.21;
+  max-height: 45px;
+  min-width: 144px;
 }
 .button-primary:hover {
   color: var(--color-brand);
@@ -520,7 +523,7 @@ border: 1px solid rgba(17, 17, 17, 0.10);
   justify-content: center;
   align-items: center;
   gap: 14px;
-
+max-height: 14px;
 }
 .list-icons-main {
   fill: var(--color-brand);
@@ -534,7 +537,43 @@ border: 1px solid rgba(17, 17, 17, 0.10);
 
 /*END Produkts section*/
 
+/* SELLERS section */
+
+
+.sellers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.sellers-photo {
+  flex-basis: calc((100% - 32px) / 3);
+border-radius: 15px;
+overflow: hidden;
+}
+.sellers-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sellers-text {
+width: 407px;
+color: var(--color-primary);
+font-size: 14px;
+font-weight: 400;
+line-height: 1.28;
+letter-spacing: 0.02em;
+}
+/* END SELLERS section */
+
 /*Reviews section*/
+
+.reviews {
+  padding: 64px 0 128px; 
+}
 .reviews-list {
   display: flex;
   gap: 28px;
@@ -559,7 +598,14 @@ border: 1px solid rgba(17, 17, 17, 0.10);
 
 
 }
-
+.list-icons-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  max-height: 14px;
+  margin-bottom: 50px;
+}
 .review {
   position: relative;
   padding: 56px 24px 26px;
@@ -614,6 +660,26 @@ background-color: var(--color-brand);
   display: inline-block;}
 
 /*END Reviews section*/
+
+/* Subscribe section */
+.section-subscribe {
+  padding: 74px 366px;
+  background: rgba(0, 0, 0, 0.2);
+background-image: url(../images/subscribe/subcribe.jpeg);
+}
+
+.section-title-subscribe {
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 24px; 
+  color: var(--color-primary-light);
+}
+/* END Subscribe section */
 
 /*Modal*/
 .backdrop {
