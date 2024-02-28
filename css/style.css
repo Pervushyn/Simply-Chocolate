@@ -352,7 +352,12 @@ letter-spacing: 0.02em;
 }
 
 .ingridients-item {
+  position: relative;
   flex-basis: calc((100% - 60px) / 4);
+}
+
+.ingridients-item:hover .ingridient-owerlay {
+  transform: scale(100%);
 }
 .ingridient-chocolate {
   border: 1px solid var(--color-brand);
@@ -379,11 +384,83 @@ letter-spacing: 0.02em;
 text-transform: uppercase;
 }
 
+.milk-text {
+  color: var(--color-primary);
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 600;
+line-height: 1.29;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+}
+
 .ingridient {
   border: 1px solid var(--color-brand);
   border-radius: 15px;
   padding: 28px;
   background-color: var(--color-primary-light)
+}
+.ingridient-owerlay {
+  max-width: 272px;
+  padding: 20px 10px;
+  background-color: var(--color-primary-light);
+  border-radius: 14px;
+  position: absolute;
+  inset: 0;
+  transform: scale(0);
+  transition: transform 1s;
+  overflow: hidden; 
+}
+
+.owerlay-name {
+  color: rgb(17, 17, 17);
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 600;
+line-height: 1.22;
+letter-spacing: -0.03em;
+text-align: left;
+text-transform: uppercase;
+margin-bottom: 8px;
+margin-right: 6px;
+}
+
+.owerlay-buttons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 14px;
+  color: var(--color-primary-light);
+}
+.owerlay-brand {
+  display: flex;
+justify-content: center;
+align-items: center;
+padding: 6px 16px 6px 16px;
+background-color: var(--color-brand);
+border: 1px solid var(--color-brand);
+border-radius: 35px;
+}
+
+.owerlay-prymery {
+  display: flex;
+justify-content: center;
+align-items: center;
+padding: 6px 16px 6px 16px;
+color: var(--color-primary);
+background-color: var(--color-background-light);
+border: 1px solid var(--color-brand);
+border-radius: 35px; 
+}  
+
+.owerlay-text {
+  color: rgb(17, 17, 17);
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.27;
+letter-spacing: -0.02em;
+text-align: left;
 }
 /* END ingridients-section*/
 
@@ -413,8 +490,8 @@ text-transform: uppercase;
 }
 .video-play {
   position: absolute;
-    top: 50%; /* Центрування по вертикалі */
-    left: 50%; /* Центрування по горизонталі */
+    top: 50%;
+    left: 50%; 
     transform: translate(-50%, -50%);
     background-color: transparent;
     border: none;
@@ -426,6 +503,7 @@ text-transform: uppercase;
 .media-text-item :not(:last-child) {
  margin-bottom: 24px; 
 }
+
 .media-text-title {
   max-width: 350px;
   color: var(--color-primary);
@@ -437,7 +515,6 @@ letter-spacing: 0.04em;
 }
 
 
-
 .media-text {
   color: var(--color-primary);
 max-width: 500px;
@@ -447,6 +524,7 @@ font-size: 14px;
 line-height: 1.28; /* 128.571% */
 letter-spacing: 0.02em;
 }
+
 
 /*END video-section*/
 
