@@ -877,6 +877,7 @@ color: var(--color-primary-light);
 
 .footer-wraper-contact {
   display: flex;
+  gap: 62px;
 }
 .footer-socials-link {
   stroke: var(--color-primary-light);
