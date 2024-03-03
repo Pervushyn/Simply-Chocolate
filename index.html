@@ -36,19 +36,19 @@
             </a>
             <ul class="nav-list">
               <li>
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="./index.html">Home</a>
               </li>
               <li>
-                <a class="nav-link" href="#">How it's made?</a>
+                <a class="nav-link" href="#how-its-made">How it's made?</a>
               </li>
               <li>
-                <a class="nav-link" href="#">Our products</a>
+                <a class="nav-link" href="#our-products">Our products</a>
               </li>
               <li>
-                <a class="nav-link" href="#">Top sellers</a>
+                <a class="nav-link" href="#sellers">Top sellers</a>
               </li>
               <li>
-                <a class="nav-link" href="#">Chocolate is loved</a>
+                <a class="nav-link" href="#reviews">Chocolate is loved</a>
               </li>
             </ul>
           </nav>
@@ -250,7 +250,7 @@
     
       <!-- How its made section -->
 
-      <section class="section">
+      <section class="section" id="how-its-made">
         <div class="container">
           <h2 class="section-title">
             how it's <span class="accent-title">made?</span>
@@ -308,7 +308,7 @@
       <!--Produkts section-->
 
 
-      <section class="section">
+      <section class="section" id="our-products">
         <div class="container">
           <h2 class="section-title">
             Our <span class="accent-title"> produkts</span>
@@ -416,7 +416,7 @@
 
     <!-- sellers section -->
 
-      <section class="section">
+      <section class="section" id="sellers">
         <div class="container">
           <h2 class="section-title">
             <span class="accent-title">Top</span> Sellers
@@ -428,7 +428,7 @@
           </ul>
           <div class="sellers-content">
             <p class="sellers-text">Crazy enough chocolate originates from a bean just like the coffee bean called Cacao. Cacao has been around for thousands of years and was first discovered by the Native American tribe called the Mayans.</p>
-            <button class="button-primary-sellers" type="button">
+            <button class="button-primary-sellers" type="button" data-modal-open>
               Buy now
             </button>
           </div>
@@ -441,7 +441,7 @@
       <!--Reviews section-->
 
 
-      <section class="section reviews">
+      <section class="section reviews" id="reviews">
         <div class="container">
           <h2 class="section-title review-title">
             <span class="accent-title"> Chocolate</span> is loved
@@ -547,19 +547,19 @@
       <nav class="footer-nav">
         <ul class="nav-list-footer">
           <li>
-            <a class="nav-link-footer" href="#">Home</a>
+            <a class="nav-link-footer" href="./index.html">Home</a>
           </li>
           <li>
-            <a class="nav-link-footer" href="#">How it's made?</a>
+            <a class="nav-link-footer" href="#how-its-made">How it's made?</a>
           </li>
           <li>
-            <a class="nav-link-footer" href="#">Our products</a>
+            <a class="nav-link-footer" href="#our-products">Our products</a>
           </li>
           <li>
-            <a class="nav-link-footer" href="#">Top sellers</a>
+            <a class="nav-link-footer" href="#sellers">Top sellers</a>
           </li>
           <li>
-            <a class="nav-link-footer" href="#">Chocolate is loved</a>
+            <a class="nav-link-footer" href="#reviews">Chocolate is loved</a>
           </li>
         </ul>
       </nav>
@@ -570,64 +570,115 @@
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close" type="button" data-modal-close>X</button>
-        <h2>Buy now</h2>
+        <div class="modal-close-flex">
+          <button class="modal-close" type="button" data-modal-close>
+            <svg class="modal-close-icon"  width="24" height="24">
+              <use href="./images/icons-close.svg#icon-x-close"></use>
+            </svg>
+          </button>
+        </div>
+        <h2 class="section-title-modal"><span class="accent-title">Buy</span> now</h2>
+        
+          <ul class="ing-list">
+            <li class="ing-list-item">
+              <div class="ing-item">
+                <img class="modal-image" src="./images/modal/kisspng-chocolate-bar.png" alt="dark chocolate">
+                <span class="ing-weight">100 g</span>
+              </div>
+            </li>
+
+            <li class="ing-list-item">
+              <div class="ing-item">
+                <img class="modal-image" src="./images/modal/kisspng-chocolate-bar1.png" alt="mix chocolate">
+                <span class="ing-weight">200 g</span>
+              </div>
+            </li>
+
+            <li class="ing-list-item">
+              <div class="ing-item">
+                <img class="modal-image" src="./images/modal/transparent-chocolate-bar2.png" alt="milk chocolate">
+                <span class="ing-weight">300 g</span>
+              </div>
+            </li>
+
+           
+          </ul>
         
         <form name="contacn-form">
           <fieldset>
-            <legend>Personal information</legend>
-            <div>
-              <label class="visually-hidden" for="user-name">Name</label>
-              <input
-                id="user-name"
-                type="text"
-                name="user-name"
-                placeholder="Name"
-                minlength="2"
-                maxlength="10"
-                required
-              />
+            <legend class="modal-label">Personal information</legend>
+            <div class="wrapper-personal-information">
+              <div class="wrapper-flex">
+                <label class="visually-hidden" for="user-name">Name</label>
+                <input
+                class="modal-input"
+                  id="user-name"
+                  type="text"
+                  name="user-name"
+                  placeholder="Name"
+                />
+              </div>
+  
+              
+              <div class="wrapper-flex">
+                <label class="visually-hidden" for="user-email">Surname</label>
+                <input
+                class="modal-input"
+                    id="user-surname"
+                  type="text"
+                  name="user-surname"
+                  placeholder="Surname"
+                />
+              </div>
             </div>
-
             
-            <div>
-              <label class="visually-hidden" for="user-email">Surname</label>
-              <input
-                  id="user-surname"
-                type="text"
-                name="user-surname"
-                placeholder="Surname"
-              />
+
+            <div class="modal-field">
+              <label class="modal-label" for="user-email">Email</label>
+              <div class="modal-input-container">
+                <svg class="input-icon" width="32" height="32">
+                  <use href="./images/icons-close.svg#icon-Frame"></use>
+                </svg>
+               <div class="inpud-cod">+380</div>
+                <input
+                  class="modal-input icon-input"
+                  id="user-email"
+                  type="email"
+                  name="user-email"
+                  placeholder="Enter your email"
+                />
+              </div>
             </div>
 
-            <div>
-              <label for="user-email">Email</label>
+            <div class="modal-field">
+             
+              <label class="modal-label" for="user-tel">Phone number</label>
+              
               <input
-                id="user-email"
-                type="email"
-                name="user-email"
-                placeholder="Enter your email"
-              />
-            </div>
-
-            <div>
-              <label for="user-tel">Phone number</label>
-              <input
+              class="modal-input"
                 id="user-tel"
                 type="tel"
                 name="user-email"
                 placeholder="Phone number"
+                required
               />
             </div>
 
-            <div>
-              <label for="user-card-number">Card number</label>
-              <input
-                id="user-card-number"
-                type="number"
-                name="card-number"
-                placeholder="Enter card"
-              />
+            <div class="modal-field">
+              <label class="modal-label" for="user-card-number">Card number</label>
+              <div class="mastercard-wrap">
+                <svg class="mastercard" width="42" >
+                  <use href="./images/icons-close.svg#icon-Mastercard"></use>
+                </svg>
+                <input
+                  class="modal-input mastercard-input"
+                  id="user-card-number"
+                  type="tel"
+                  name="card-number"
+                  placeholder="Enter card"
+                  maxlength="16"
+                />
+              </div>
             </div>
           </fieldset>
 
@@ -636,14 +687,15 @@
           <fieldset>
             <legend class="visually-hidden">Additional information</legend>
             <div>
-            <label for="user-comment">Comment</label>
+            <label class="modal-label" for="user-comment">Comment</label>
             <textarea
+            class="modal-input textarea-modal"
               id="user-comment"
               name="user-comment"
               placeholder="Ener text"
             ></textarea>
           </fieldset>
-          <Button type="submit">Submit</Button>
+          <Button class="button-primary modal-button" type="submit">Submit</Button>
           </div>
         </form>
       </div>

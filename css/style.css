@@ -6,6 +6,8 @@
   --color-background-darck: #1e1823;
   --color-background-light: #fafafa;
   --color-background-tr: #ffffff1A;
+  --c-modal-border:#1111110d;
+  --c-bcg-decor: #4040404D;
 }
 body {
   color: var(--color-primary);
@@ -922,6 +924,7 @@ color: var(--color-primary-light);
 /*Modal*/
 .backdrop {
   position: fixed;
+  padding: 20px;
   inset: 0;
   display: flex;
   align-items: center;
@@ -941,6 +944,8 @@ color: var(--color-primary-light);
 .modal {
   position: relative;
   width: 610px;
+  height: 100%;
+  overflow: auto;
   background-color: var(--color-background-light);
   border-radius: 15px;
   padding: 48px;
@@ -955,5 +960,167 @@ color: var(--color-primary-light);
   position: absolute;
   top: 24px;
   right: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
+.modal-close-icon {
+  stroke: var(--color-primary);
+  
+
+}
+.section-title-modal {
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.ing-list {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 16px;
+margin-bottom: 40px;
+}
+.ing-list-item {
+  flex-basis: calc((100% -32px) / 3);
+
+}
+
+.ing-item {
+  max-width: 162px;
+  height: auto;
+  background-color: var(--color-primary-light);
+  padding: 24px 20px 20px;
+  border-radius: 15px;
+  border: 1.5px solid var(--c-modal-border);
+}
+
+.modal-image {
+margin-bottom: 14px;
+}
+
+.ing-weight {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: var(--color-background-light);
+  padding: 8px 20px;
+}
+.wrapper-personal-information {
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 18px;
+}
+.wrapper-flex {
+flex-basis: calc((100% - 18px) / 2);
+}
+
+.modal-field {
+margin-bottom: 18px;
+}
+
+.modal-label {
+  display: block;
+font-weight: 500;
+font-family: Montserrat;
+line-height: 1.2;
+margin-bottom: 8px;
+}
+
+.modal-input {
+  font-family: Montserrat;
+  width: 100%;
+  border: 1.5px solid var(--c-modal-border);
+ border-radius: 13px;
+ background-color: var(--color-background-light);
+ padding: 22px 24px;
+ transition: border-color 0.2s;
+}
+
+.modal-input:focus {
+  border-color: var(--color-brand);
+ outline: none;
+}
+.modal-button {
+  margin-top: 18px;
+}
+
+.textarea-modal {
+  min-height: 137px;
+  resize: none;
+  width: 100%;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 13px;
+  background-color: var(--color-background-light);
+  padding: 22px 24px;
+}
+.modal-input-container {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+}
+.icon-input {
+  padding-left: 162px;
+}
+.mastercard-input {
+  padding-right: 70px;
+}
+.inpud-cod {
+  position: absolute;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  padding-left: 74px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+.modal-input-container::after {
+  display: block;
+  content: '';
+  width: 3px;
+  height: 32px;
+  background: var(--color-background-light);
+ left: 20px;
+ top: 0;
+ position: absolute;
+ top: 50%;
+ background-color: var(--c-bcg-decor);
+ transform: translate(118px, -50%)
+}
+
+.mastercard-wrap {
+  position: relative;
+}
+
+.mastercard {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /*END Modal*/
