@@ -1,11 +1,12 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
+    openModalBtns: document.querySelectorAll('[data-modal-open]'), // Изменено на querySelectorAll
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
+  // Используйте forEach для добавления события 'click' к каждой кнопке
+  refs.openModalBtns.forEach(btn => btn.addEventListener('click', toggleModal));
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
