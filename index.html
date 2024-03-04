@@ -770,25 +770,44 @@
         </form>
 
     </div>
+  </div>
 
     <!-- End Modal review -->
 
     <!-- Modal Subscribe -->
-   <!-- <div class="backdrop-subscribe">
+   <div class="backdrop-subscribe is-hidden">
     <div class="modal-subscribe">
-      <img src="" alt="">
-      <h2></h2>
-      <form>
-        <label for=""></label>
-        <input type="email">
-      </form>
-      <Button class="button-primary modal-button" type="submit">Subscribe</Button>
+      <button class="modal-close" type="button">
+        <svg class="modal-close-icon-sub"  width="24" height="24">
+          <use href="./images/icons-close.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <img class="sub-img" src="./images/modal/image-subscribe.jpeg" alt="chocolade">
+      <div class="modal-subscribe-content">
+        <h2 class="title-modal-sub">Explore our <br/>
+           <span class="accent-title">new chocolate</span> first!</h2>
 
+      <form>
+        <div class="sub-item">
+          <label class="visually-hidden" for="email-sub">Email subscribe</label>
+        <input
+         class="modal-input-sub" 
+         type="email" id="email-sub" 
+         name="email"
+          placeholder="Enter you email"
+          required />
+        <Button class="button-subscribe-sub" type="submit">Subscribe</Button>
+        </div>
+      </form>
+    
+        </div>
+      </div>
     </div>
-   </div> -->
+   </div>
     <!-- End Modal Subscribe -->
 
     <script src="./js/modal.js"></script>
     <script src="./js/modal-review.js"></script>
+    <script src="./js/modal-sub.js"></script>
   </body>
 </html>
