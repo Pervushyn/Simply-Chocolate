@@ -499,7 +499,7 @@
           <li><svg class="list-icons-secondary" width="14" height="14"><use href="./images/icons.svg#icon-Ellipse-3" ></use></svg></li>
         
         </ul>
-        <button class="button-secondary" type="button" href="#">Leave a review</button>
+        <button class="button-secondary" type="button" href="">Leave a review</button>
       </section>
     <!-- END Reviews section-->
 
@@ -508,7 +508,7 @@
         <div class="container-subscribe">
           <h2 class="section-title-subscribe">Explore our new chocolate first</h2>
           <p class="text-subscribe">From the velvety texture to the rich and complex flavor, our New Chocolate is a true indulgence that will leave you craving more. Made with only the finest ingredients and handcrafted with the utmost care, each piece is a work of art that is sure to please.</p>
-          <button class="button-subscribe" type="button">Subscribe</button>
+          <button class="button-subscribe"type="button">Subscribe</button>
         </div>
       </section>
 
@@ -567,7 +567,7 @@
       </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Modal buy-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="modal-close-flex">
@@ -600,8 +600,6 @@
                 <span class="ing-weight">300 g</span>
               </div>
             </li>
-
-           
           </ul>
         
         <form name="contacn-form">
@@ -635,27 +633,25 @@
 
             <div class="modal-field">
               <label class="modal-label" for="user-email">Email</label>
-              <div class="modal-input-container">
-                <svg class="input-icon" width="32" height="32">
-                  <use href="./images/icons-close.svg#icon-Frame"></use>
-                </svg>
-               <div class="inpud-cod">+380</div>
                 <input
-                  class="modal-input icon-input"
+                  class="modal-input"
                   id="user-email"
                   type="email"
                   name="user-email"
                   placeholder="Enter your email"
                 />
-              </div>
+              
             </div>
 
             <div class="modal-field">
-             
               <label class="modal-label" for="user-tel">Phone number</label>
-              
+              <div class="modal-input-container">
+                <svg class="input-icon" width="32" height="32">
+                  <use href="./images/icons-close.svg#icon-Frame"></use>
+                </svg>
+               <div class="inpud-cod">+380</div>
               <input
-              class="modal-input"
+                class="modal-input icon-input"
                 id="user-tel"
                 type="tel"
                 name="user-email"
@@ -663,6 +659,7 @@
                 required
               />
             </div>
+          </div>
 
             <div class="modal-field">
               <label class="modal-label" for="user-card-number">Card number</label>
@@ -695,13 +692,103 @@
               placeholder="Ener text"
             ></textarea>
           </fieldset>
-          <Button class="button-primary modal-button" type="submit">Submit</Button>
+          <Button class="button-primary" type="submit">Submit</Button>
           </div>
         </form>
       </div>
     </div>
 
+    <!-- End Modal buy-->
+
+    
+    <!-- Modal review -->
+    <div class="backdrop-review is-hidden">
+      <div class="modal-review">
+        <div class="modal-close-flex">
+          <button class="modal-close" type="button">
+            <svg class="modal-close-icon"  width="24" height="24">
+              <use href="./images/icons-close.svg#icon-x-close"></use>
+            </svg>
+          </button>
+        </div>
+        <h2 class="section-title-modal reviews-title">Leave a review about<span class="accent-title"> our chocolate</span></h2>
+        <form name="review-form">
+          <legend class="visually-hidden">reviews form</legend>
+          <div class="wrapper-information-review">
+            <div class="wrapper-review">
+              <label class="visually-hidden" for="user-name">Name</label>
+              <input
+              class="modal-input"
+                id="user-name"
+                type="text"
+                name="user-name"
+                placeholder="Name"
+              />
+            </div>
+
+            
+            <div class="modal-field">
+              <label class="modal-label visually-hidden" for="user-email">Email</label>
+                <input
+                  class="modal-input"
+                  id="user-email"
+                  type="email"
+                  name="user-email"
+                  placeholder="Email"
+                />
+              
+            </div>
+          </div>
+
+          <div class="modal-field">
+            <label class="modal-label visually-hidden" for="user-email">Phone number</label>
+            <div class="modal-input-container">
+              <svg class="input-icon" width="32" height="32">
+                <use href="./images/icons-close.svg#icon-Frame"></use>
+              </svg>
+             <div class="inpud-cod">+380</div>
+              <input
+                class="modal-input icon-input"
+                id="user-email"
+                type="tel"
+                name="user-email"
+                placeholder="Phone number"
+                required
+              />
+            </div>
+          </div>
+
+          <label class="modal-label visually-hidden" for="user-comment">Comment</label>
+            <textarea
+            class="modal-input textarea-modal"
+              id="user-comment"
+              name="user-comment"
+              placeholder="Ener text"
+            ></textarea>
+            <Button class="button-primary" type="submit">Send</Button>
+
+        </form>
+
+    </div>
+
+    <!-- End Modal review -->
+
+    <!-- Modal Subscribe -->
+   <!-- <div class="backdrop-subscribe">
+    <div class="modal-subscribe">
+      <img src="" alt="">
+      <h2></h2>
+      <form>
+        <label for=""></label>
+        <input type="email">
+      </form>
+      <Button class="button-primary modal-button" type="submit">Subscribe</Button>
+
+    </div>
+   </div> -->
+    <!-- End Modal Subscribe -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/modal-review.js"></script>
   </body>
 </html>
