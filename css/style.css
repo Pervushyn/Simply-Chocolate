@@ -91,9 +91,8 @@ img {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 20px;
 }
 
 .accent-title {
@@ -676,18 +675,22 @@ transition: background-color 0.2s;
 /*Reviews section*/
 
 .reviews {
-  padding: 64px 0 128px; 
+  padding: 36px 0 72px;
 }
 .reviews-list {
   display: flex;
-  gap: 28px;
+  flex-wrap: wrap;
   margin-bottom: 32px;
 }
 .reviews-item {
-  flex-basis: calc((100% - 56px) / 3);
+  flex-basis: 100%;
+}
+
+.reviews-item:not(:first-child) {
+  display: none;
 }
 .review-title {
-margin-bottom: 90px;
+margin-bottom: 74px;
 }
 
 .review-vika {
@@ -708,7 +711,6 @@ border: 1px solid rgba(17, 17, 17, 0.10);
   align-items: center;
   gap: 14px;
   max-height: 14px;
-  margin-bottom: 50px;
 }
 .review {
   position: relative;
@@ -721,6 +723,7 @@ border: 1px solid rgba(17, 17, 17, 0.10);
 }
 .review-name {
   margin-bottom: 24px;
+  font-size: 18px;
 }
 
 .review-description {
@@ -748,11 +751,11 @@ font-family: Montserrat;
   color: var(--color-primary);
   border: 1px solid var(--color-brand);
   border-radius: 100px;
-  padding: 14px 40px;
+  padding: 12px 28px;
   line-height: 1.21;
   margin-top: 32px;
 font-family: Montserrat;
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 600;
 }
@@ -1285,4 +1288,68 @@ margin-bottom: 8px;
 }
 .modal-input-sub:focus {
   border-color: var(--color-brand);
+}
+
+
+@media screen and (min-width: 375px) {
+ .container {
+  max-width: 375px;
+ }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+   max-width: 768px;
+   padding: 0 32px; 
+  }
+  .reviews {
+    padding: 50px 0 100px;
+  }
+  .reviews-item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+  .reviews-item:not(:last-child) {
+  display: flex;
+  }
+  .review-title {
+    margin-bottom: 80px;
+    }
+  .reviews-list {
+    gap: 16px;
+ }
+ .button-secondary {
+  padding: 14px 40px; 
+  font-size: 18px;
+ }
+ .list-icons-review {
+   margin-bottom: 50px; 
+}
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+   }
+   .reviews {
+    padding: 64px 0 128px; 
+    gap: 28px; 
+  }
+
+  .reviews-list {
+    gap: 24px;
+ }
+  .reviews-item {
+    flex-basis: calc((100% - 56px) / 3);
+   display: flex;
+  }
+
+  .reviews-item:last-child {
+    display: flex;
+  }
+  .review-title {
+    margin-bottom: 90px;
+    }
+    .list-icons-review {
+      margin-bottom: 50px;
+    }
 }
