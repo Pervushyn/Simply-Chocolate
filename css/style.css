@@ -82,7 +82,7 @@ h6 {
   line-height: 1.16;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 img {
   display: block;
@@ -468,7 +468,12 @@ text-align: left;
 /*video-section*/
 .video-inner {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
+  
+  margin: 0 auto;
 }
 .video-backgraund {
   object-fit: cover;
@@ -488,6 +493,7 @@ text-align: left;
 .video-media {
   display: inline-block; 
   position: relative;
+
 }
 .video-play {
   position: absolute;
@@ -498,11 +504,11 @@ text-align: left;
     border: none;
 }
 .media-content {
-  flex-basis: calc((100% -20px) / 2);
-  padding: 32px;
+  /* flex-basis: calc((100% -20px) / 2); */
+  padding: 20px 14px;
 }
 .media-text-item :not(:last-child) {
- margin-bottom: 24px; 
+ margin-bottom: 18px;
 }
 
 .media-text-title {
@@ -510,19 +516,18 @@ text-align: left;
   color: var(--color-primary);
 font-size: 18px;
 font-weight: 600;
-line-height: 1.33; /* 133.333% */
-margin-bottom: 28px;
+line-height: 1.33; 
+margin-bottom: 20px;
 letter-spacing: 0.04em;
 }
 
 
 .media-text {
   color: var(--color-primary);
-max-width: 500px;
 font-weight: 400;
 font-family: Montserrat;
 font-size: 14px;
-line-height: 1.28; /* 128.571% */
+line-height: 1.29; 
 letter-spacing: 0.02em;
 }
 
@@ -539,7 +544,6 @@ letter-spacing: 0.02em;
   margin-bottom: 32px;
 }
 .produkts-item {
-  /* flex-basis: calc((100%-54px) / 4); */
   flex-basis: 100%;
   background-color: var(--color-background-light);
 }
@@ -1318,8 +1322,26 @@ margin-bottom: 8px;
    max-width: 768px;
    padding: 0 32px; 
   }
+  .section-title {
+    margin-bottom: 50px;
+  }
   .section {
     padding: 50px 0;
+  }
+  
+  .media-content {
+    /* flex-basis: calc((100% -20px) / 2); */
+    padding: 32px;
+
+  }
+  .media-text {
+  max-width: 540px;
+  }
+  .media-text-item :not(:last-child) {
+    margin-bottom: 24px; 
+   }
+  .media-text-title {
+  margin-bottom: 28px;
   }
   .produkts-list {
     gap: 24px 18px;
@@ -1335,7 +1357,6 @@ margin-bottom: 8px;
     flex-basis: calc((100% - 16px) / 2);
   }
 
-  
   .sellers-text {
     width: 304px;
   }
@@ -1373,7 +1394,16 @@ margin-bottom: 8px;
   .container {
     max-width: 1200px;
    }
+   .video-inner {
+    flex-wrap: nowrap;
+  }
+   .media-content {
+    flex-basis: calc((100% -20px) / 2);
 
+  }
+   .media-text {
+    max-width: 500px;
+    }
    .produkts-item {
     flex-basis: calc((100% - 54px) / 4); 
   }
