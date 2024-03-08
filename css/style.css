@@ -264,7 +264,7 @@ fieldset {
 
 /*advatage section*/
 .advantages-fon {
-  padding: 50px 0;
+  padding: 20px;
   background-color: var(--color-background-darck);
 }
 .advantage-icon {
@@ -294,30 +294,25 @@ fieldset {
 }
 .advantages-list {
   display: flex;
-  gap: 70px;
+  flex-wrap: wrap;
+  /* gap: 70px; */
+  gap: 20px;
+}
+
+.advantages-item {
+
+  flex-basis: 100%;
 }
 .advantages-item:not(:last-child) {
   position: relative;
   padding-right: 18px;
 }
 
-.advantages-item:not(:last-child)::after {
-  content: '';
-  transform: rotate(-90deg) translateX(50%);
-  background-color: var(--color-background-tr);
-  top: 50%;
-  right: 0;
-  width: 124px;
-  height: 1px;
-  color: var(--color-primary-tr);
-  position: absolute;
-  transform-origin: 100% 0;
-}
 .advantages-text {
   color: var(--color-primary-tr);
   font-weight: 400;
   line-height: 1.21;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
 }
 /*END advatage section*/
 
@@ -1331,6 +1326,15 @@ margin-bottom: 8px;
   .section {
     padding: 50px 0;
   }
+  .advantages-fon {
+    padding: 50px 0;
+  }
+  .advantages-list {
+    gap: 32px;
+  }
+  .advantages-item {
+    flex-basis: calc((100% - 32px) / 2);
+  }
   .ingridients-list {
     gap: 32px;
   }
@@ -1407,6 +1411,25 @@ margin-bottom: 8px;
   .container {
     max-width: 1200px;
    }
+   .advantages-list {
+    gap: 70px;
+  }
+  .advantages-item {
+    flex-basis: calc((100% - 140px) / 3);
+  }
+   .advantages-item:not(:last-child)::after {
+  content: '';
+  transform: rotate(-90deg) translateX(50%);
+  background-color: var(--color-background-tr);
+  top: 50%;
+  right: 0;
+  width: 124px;
+  height: 1px;
+  color: var(--color-primary-tr);
+  position: absolute;
+  transform-origin: 100% 0;
+}
+
    .ingridients-list {
     gap: 18px;
   }
