@@ -270,7 +270,6 @@ fieldset {
 
 /*advatage section*/
 .advantages-fon {
-  padding: 20px;
   background-color: var(--color-background-darck);
 }
 .advantage-icon {
@@ -295,23 +294,18 @@ fieldset {
   color: var(--color-background-light);
   font-weight: 600;
   line-height: 18px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 70px; */
   gap: 20px;
 }
 
 .advantages-item {
-
   flex-basis: 100%;
-}
-.advantages-item:not(:last-child) {
   position: relative;
-  padding-right: 18px;
 }
 
 .advantages-text {
@@ -852,31 +846,31 @@ background-position: center;
 
 /* footer */
 .section-footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 32px 0;
 background-color: var(--color-background-darck);
 color: var(--color-primary-light);
 }
 
 .footer-container {
-  padding-left: 32px;
-  padding-right: 32px;
-  width: 1200px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .footer-content {
   display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 64px;
 }
 .section-title-footer {
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: 0.02em;
   color: var(--color-primary-light);
   width: 300px;
-  margin-bottom: 86px;
+  /* margin-bottom: 86px; */
   position: relative;
 }
 .accent-title-footer {
@@ -898,14 +892,20 @@ color: var(--color-primary-light);
   color: var(--color-primary-light);
   margin-bottom: 4px;
 }
+.footer-link-email {
+  display: block;
+  color: var(--color-primary-light);
+}
 .footer-sosials {
   display: flex;
-  gap: 18px;
+  gap: 16px;
 }
 
 .footer-wraper-contact {
   display: flex;
-  gap: 62px;
+  flex-grow: 1;
+  justify-content: space-between;
+  /* gap: 62px; */
 }
 .footer-socials-link {
   stroke: var(--color-primary-light);
@@ -921,16 +921,18 @@ color: var(--color-primary-light);
   display: block;
   content: '';
   position: absolute;
-  width: 1136px;
+  /* width: 1136px; */
+  width: 336px;
   height: 1px;
   background-color: var(--color-background-tr);
-  transform: translateY(62px)
+  /* transform: translateY(62px) */
+  transform: translateY(136px)
 }
 
 .nav-list-footer {
   display: flex;
-  gap: 24px;
-  align-items: center;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .nav-link-footer {
@@ -1316,8 +1318,13 @@ margin-bottom: 8px;
 
 @media screen and (min-width: 375px) {
  .container {
+  min-width: 320px;
   max-width: 375px;
  }
+ .footer-container {
+  min-width: 320px;
+  max-width: 375px;
+}
  
 }
 
@@ -1325,6 +1332,9 @@ margin-bottom: 8px;
   .container {
    max-width: 768px;
    padding: 0 32px; 
+  }
+  .footer-container {
+    max-width: 768px;
   }
   .section-title {
     margin-bottom: 50px;
@@ -1340,12 +1350,11 @@ margin-bottom: 8px;
   }
   .advantages-item {
     flex-basis: calc((100% - 32px) / 2);
+    padding-right: 28px;
   }
+  
   .ingridients-list {
     gap: 32px;
-  }
-  .ingridients-title {
-    margin-bottom: 28px;
   }
   .ingridients-subtitle {
     margin: 0 auto 50px;
@@ -1405,8 +1414,33 @@ margin-bottom: 8px;
  .list-icons-review {
    margin-bottom: 50px; 
 }
-
-
+.section-footer {
+  padding: 50px 0;
+}
+.footer-container {
+ padding: 0 32px;
+}
+.section-title-footer {
+  font-size: 28px;
+}
+.footer-wraper-contact {
+  flex-grow: 0;
+  gap: 50px;
+}
+.footer-content {
+  margin-bottom: 78px;
+}
+.section-title-footer::after {
+  width: 704px;
+  transform: translateY(54px);
+}
+.footer-sosials {
+  gap: 18px;
+}
+.nav-list-footer {
+  flex-direction: row;
+  gap: 24px;
+}
 }
 
 @media screen and (min-width: 1200px) {
@@ -1417,6 +1451,9 @@ margin-bottom: 8px;
   .container {
     max-width: 1200px;
    }
+   .footer-container {
+    max-width: 1200px;
+  }
 
    .header {
   padding-bottom: 8px;
@@ -1441,6 +1478,10 @@ margin-bottom: 8px;
   .advantages-item {
     flex-basis: calc((100% - 140px) / 3);
   }
+  .advantages-item:not(:last-child) {
+    padding-right: 28px;
+  }
+
    .advantages-item:not(:last-child)::after {
   content: '';
   transform: rotate(-90deg) translateX(50%);
@@ -1508,5 +1549,13 @@ margin-bottom: 8px;
     }
     .list-icons-review {
       margin-bottom: 50px;
+    }
+    .footer-content {
+      margin-bottom: 86px;
+    }
+
+    .section-title-footer::after {
+      width: 1136px;
+      transform: translateY(62px);
     }
 }
