@@ -449,7 +449,7 @@
 
       <section class="section reviews" id="reviews">
         <div class="container">
-          <h2 class="section-title review-title">
+          <h2 class="section-title reviews-title">
             <span class="accent-title"> Chocolate</span> is loved
           </h2>
           <ul class="reviews-list">
@@ -575,7 +575,7 @@
     </footer>
 
     <!-- Modal buy-->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="modal-close-flex">
           <button class="modal-close" type="button" data-modal-close>
@@ -637,7 +637,6 @@
               </div>
             </div>
             
-
             <div class="modal-field">
               <label class="modal-label" for="user-email">Email</label>
                 <input
@@ -647,7 +646,6 @@
                   name="user-email"
                   placeholder="Enter your email"
                 />
-              
             </div>
 
             <div class="modal-field">
@@ -703,13 +701,13 @@
           </div>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <!-- End Modal buy-->
 
     
     <!-- Modal review -->
-    <!-- <div class="backdrop-review is-hidden">
+    <div class="backdrop-review is-hidden">
       <div class="modal-review">
         <div class="modal-close-flex">
           <button class="modal-close" type="button">
@@ -718,7 +716,7 @@
             </svg>
           </button>
         </div>
-        <h2 class="section-title-modal reviews-title">Leave a review about<span class="accent-title"> our chocolate</span></h2>
+        <h2 class="section-title-modal">Leave a review about<span class="accent-title-modal"> our chocolate</span></h2>
         <form name="review-form">
           <legend class="visually-hidden">reviews form</legend>
           <div class="wrapper-information-review">
@@ -734,7 +732,7 @@
             </div>
 
             
-            <div class="modal-field">
+            <div class="modal-field-review">
               <label class="modal-label visually-hidden" for="user-email">Email</label>
                 <input
                   class="modal-input"
@@ -745,12 +743,12 @@
                 />
               
             </div>
-          </div>
+          
 
           <div class="modal-field">
             <label class="modal-label visually-hidden" for="user-email">Phone number</label>
             <div class="modal-input-container">
-              <svg class="input-icon" width="32" height="32">
+              <svg class="input-icon" width="24" height="18">
                 <use href="./images/icons-close.svg#icon-Frame"></use>
               </svg>
              <div class="inpud-cod">+380</div>
@@ -764,6 +762,7 @@
               />
             </div>
           </div>
+        </div>
 
           <label class="modal-label visually-hidden" for="user-comment">Comment</label>
             <textarea
@@ -772,17 +771,17 @@
               name="user-comment"
               placeholder="Ener text"
             ></textarea>
-            <Button class="button-primary" type="submit">Send</Button>
+            <Button class="button-primary-review" type="submit">Send</Button>
 
         </form>
 
     </div>
-  </div> -->
+  </div>
 
     <!-- End Modal review -->
 
     <!-- Modal Subscribe -->
-   <!-- <div class="backdrop-subscribe is-hidden">
+   <div class="backdrop-subscribe is-hidden">
     <div class="modal-subscribe">
       <button class="modal-close" type="button">
         <svg class="modal-close-icon-sub"  width="24" height="24">
@@ -810,7 +809,7 @@
         </div>
       </div>
     </div>
-   </div> -->
+   </div>
     <!-- End Modal Subscribe -->
 
     <!-- Modal menu -->
@@ -859,9 +858,9 @@
 
      <!-- End Modal menu -->
 
-    <!-- <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/modal-review.js"></script>
-    <script src="./js/modal-sub.js"></script> -->
+    <script src="./js/modal-sub.js"></script>
     <script src="./js/modal-menu.js"></script>
   </body>
 </html>
