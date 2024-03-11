@@ -60,11 +60,12 @@ h6 {
   cursor: pointer;
   border: none;
   border-radius: 100px;
-  padding: 14px 40px;
+  padding: 12px 28px;
   font-weight: 600;
   line-height: 1.21;
   max-height: 45px;
-  min-width: 144px;
+  /* min-width: 144px; */
+  min-width: 120px;
 }
 .button-primary:hover {
   color: var(--color-brand);
@@ -177,20 +178,30 @@ fieldset {
   padding-bottom: 72px;
 }
 .hero-inner {
-  padding: 380px 40px 40px;
+  /* padding: 380px 40px 40px; */
+  padding: 395px 20px 20px;
   background-color: var(--color-background-darck); /*replase with image*/
   border-radius: 30px;
-  background-image: url(../images/chocolate-fon.jpg);
+  background-image: url(../images/hero/hero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media only screen and (min-resolution: 192dpi) {
+  .hero-inner {
+    background-image: url(../images/hero/hero@2x.png) ;
+}
+}
 
+.hero-wrap {
+  display: flex;
+  flex-direction: column;
+}
 .hero-title {
   margin-bottom: 32px;
   max-width: 484px;
   color: var(--color-primary-light);
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: 0.03em;
@@ -199,13 +210,15 @@ fieldset {
 .hero-actions {
   display: flex;
   gap: 14px;
-  align-items: center;
+  margin-bottom: 32px;
+  /* align-items: center; */
 }
 .button-hero {
   color: var(--color-primary-light);
   border: 1px solid currentColor;
   border-radius: 100px;
-  padding: 14px 40px;
+  /* padding: 14px 40px; */
+  padding: 12px 28px;
   font-weight: 600;
   line-height: 1.21;
 }
@@ -219,7 +232,8 @@ fieldset {
 }
 .hero-arrow {
   display: flex;
-  gap: 14px;
+  gap: 12px;
+  font-size: 12px;
   margin-left: auto;
   align-items: center;
   color: var(--color-primary-light);
@@ -237,8 +251,10 @@ fieldset {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  /* width: 38px;
+  height: 38px; */
+  width: 28px;
+  height: 28px;
   fill: var(--color-brand);
   background-color: var(--color-primary-light);
   border-radius: 50%;
@@ -966,7 +982,6 @@ color: var(--color-primary-light);
 }
 .section-title-modal {
   width: 235px;
-  /* text-align: center; */
   text-align: start;
   font-size: 20px;
   font-style: normal;
@@ -1477,6 +1492,38 @@ text-align: left;
   .section {
     padding: 50px 0;
   }
+.hero-arrow-link {
+  width: 38px;
+  height: 38px;
+}
+  .hero-inner {
+    padding: 670px 40px 40px;
+    background-image: url(../images/hero/hero-desk.jpeg);
+  }
+  
+  @media only screen and (min-resolution: 192dpi) {
+    .hero-inner {
+      background-image: url(../images/hero/hero-tab@2x.png) ;
+  }
+  }
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hero-arrow {
+    gap: 14px;
+    font-size: 14px;
+  }
+  .button-primary {
+    min-width: 144px;
+    height: 46px;
+  }
+  .button-hero {
+    height: 46px;
+  }
   .advantages-fon {
     padding: 50px 0;
   }
@@ -1720,6 +1767,15 @@ padding-left: 74px;
 }
 .menu-icon {
   display: none;
+}
+.hero-inner {
+  padding: 380px 40px 40px;
+  background-image: url(../images/hero/hero-desk.jpeg);
+}
+@media only screen and (min-resolution: 192dpi) {
+  .hero-inner {
+    background-image: url(../images/hero/hero-desk@2x.png) ;
+}
 }
    .advantages-list {
     gap: 70px;
