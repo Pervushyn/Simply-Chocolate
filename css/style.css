@@ -109,9 +109,6 @@ fieldset {
   margin: 0;
 }
 /*header*/
-/* .header {
-  padding-bottom: 8px;
-} */
 .header-inner {
   display: flex;
   gap: 24px;
@@ -144,7 +141,7 @@ fieldset {
   align-items: center;
   color: var(--color-primary);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 20px; 
   letter-spacing: -0.54px;
   text-transform: uppercase;
@@ -979,14 +976,37 @@ color: var(--color-primary-light);
   text-transform: uppercase;
   margin-bottom: 32px; 
 }
+
+.section-title-modal-buy {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;  
+}
+.accent-title-buy {
+  
+  color: var(--color-brand);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+/* MODAL */
+
 .modal {
   position: relative;
-  width: 610px;
+  max-width: 375px;
   height: 100%;
   overflow: auto;
   background-color: var(--color-background-light);
   border-radius: 15px;
-  padding: 48px;
+  padding: 32px 24px;
   transform: scale(1);
   transition: transform 500ms ease-in-out;
 }
@@ -1025,10 +1045,10 @@ color: var(--color-brand);
 
 .ing-list {
 display: flex;
-justify-content: center;
-align-items: center;
-gap: 16px;
-margin-bottom: 40px;
+flex-direction: column;
+justify-content: start;
+gap: 8px;
+margin-bottom: 32px;
 }
 .ing-list-item {
   flex-basis: calc((100% -32px) / 3);
@@ -1036,28 +1056,28 @@ margin-bottom: 40px;
 }
 
 .ing-item {
-  max-width: 162px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: auto;
   background-color: var(--color-primary-light);
-  padding: 24px 20px 20px;
+  padding: 8px 16px;
   border-radius: 15px;
   border: 1.5px solid var(--c-modal-border);
 }
 
 .modal-image {
-margin-bottom: 14px;
+width: 84px;
 }
 
 .ing-weight {
   display: flex;
-  text-align: center;
+  align-items: center;
   justify-content: center;
   font-family: Montserrat;
   font-size: 14px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  align-items: center;
+  height: 30px;
   border-radius: 100px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   background: var(--color-background-light);
@@ -1065,19 +1085,21 @@ margin-bottom: 14px;
 }
 .wrapper-personal-information {
   display: flex;
-  justify-content: space-between;
-  
-  align-items: center;
-  gap: 22px;
+  flex-direction: column;
+  gap: 14px;
   margin-bottom: 18px;
 }
 .wrapper-flex {
 flex-basis: calc((100% - 18px) / 2);
 }
 
-.modal-field {
-margin-bottom: 14px;
+.modal-field-buy {
+margin-bottom: 18px;
 }
+
+.modal-field {
+  margin-bottom: 14px;
+  }
 
 .modal-label {
   display: block;
@@ -1106,7 +1128,6 @@ margin-bottom: 8px;
 }
 
 .textarea-modal {
-  /* min-height: 137px; */
   min-height: 90px;
   resize: none;
   width: 100%;
@@ -1126,7 +1147,6 @@ margin-bottom: 8px;
   transform: translateY(-50%);
 }
 .icon-input {
-  /* padding-left: 162px; */
   padding-left: 100px;
 }
 .mastercard-input {
@@ -1146,9 +1166,7 @@ margin-bottom: 8px;
 .modal-input-container::after {
   display: block;
   content: '';
-  /* width: 3px; */
   width: 1px;
-  /* height: 32px; */
   height: 24px;
   background: var(--color-background-light);
  left: 20px;
@@ -1156,7 +1174,6 @@ margin-bottom: 8px;
  position: absolute;
  top: 50%;
  background-color: var(--c-bcg-decor);
- /* transform: translate(118px, -50%);*/
  transform: translate(70px, -50%);
 }
 
@@ -1170,7 +1187,19 @@ margin-bottom: 8px;
   top: 50%;
   transform: translateY(-50%);
 }
-
+.button-primary-modal-buy {
+  font-family: inherit;
+  color: var(--color-primary-light);
+  background-color: var(--color-brand);
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 28px;
+  font-weight: 600;
+  line-height: 1.21;
+  max-height: 45px;
+  min-width: 110px;
+}
 /*END Modal*/
 
 /*  Modal review */
@@ -1560,6 +1589,54 @@ text-align: left;
   font-size: 24px;
   margin-bottom: 40px; 
 }
+.accent-title-buy {
+  font-size: 24px;
+}
+.section-title-modal-buy {
+  font-size: 24px;
+}
+
+.modal {
+  max-width: 610px;
+  padding: 40px;
+}
+.modal-image {
+  width: 120px;
+  height: 108px;
+}
+.ing-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  }
+  .ing-item {
+    flex-direction: column;
+    gap: 14px;
+    max-width: 162px;
+    padding: 24px 20px 20px;
+  }
+  .wrapper-personal-information {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+  }
+  .mastercard {
+    width: 42px;
+  }
+  .textarea-modal {
+    min-height: 137px;
+  }
+  .button-primary-modal-buy {
+    width: 132px;
+    height: 46px;
+  }
+  .icon-input {
+    padding-left: 162px;
+  }
+
 .modal-review {
   min-width: 516px;
   max-height: 628px;
@@ -1631,6 +1708,7 @@ padding-left: 74px;
 }
    .logo {
   font-size: 18px;
+  font-weight: 700;
 }
 .header-nav {
   display: flex;
