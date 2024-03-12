@@ -734,11 +734,16 @@
             </svg>
           </button>
         </div>
-        <h2 class="section-title-modal">Leave a review about<span class="accent-title-modal"> our chocolate</span></h2>
+        <h2 class="section-title-modal">
+          Leave a review about
+          <span class="accent-title-modal"> our chocolate</span>
+        </h2>
         <form name="review-form">
+          <fieldset>
+            <legend class="visually-hidden">reviews form</legend>
           <div class="wrapper-information-review">
             <div class="wrapper-review">
-               <legend class="visually-hidden">reviews form</legend>
+               
               <label class="visually-hidden" for="user-name">Name</label>
               <input
                 class="modal-input"
@@ -780,7 +785,11 @@
             </div>
           </div>
         </div>
+          </fieldset>
 
+          <fieldset>
+            <legend class="visually-hidden">Additional information</legend>
+            <div>
           <label class="modal-label visually-hidden" for="user-comment-buy">Comment</label>
             <textarea
             class="modal-input textarea-modal"
@@ -788,6 +797,7 @@
               name="user-comment"
               placeholder="Ener text"
             ></textarea>
+          </fieldset>
             <Button class="button-primary-review" type="submit">Send</Button>
 
         </form>
