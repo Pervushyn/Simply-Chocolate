@@ -268,13 +268,21 @@
           </h2>
           <div class="video-inner">
             <div class="video-media">
+             <picture>
+              <source media="min-width: 768px" srcset="./images/Video/tab-video.png 1x, ./images/Video/tab-video@2x.png 2x">
+              <source media="max-width: 767px" srcset="./images/Video/mob-video.png 1x, ./images/Video/mob-video@2x.png 2x">
               <img
-                class="video-backgraund"
-                src="./images/Video/pfan.jpg"
-                alt="pfan"
-              />
+              src="./images/Video/mob-video.png"
+              class="video-backgraund"
+              alt="pfan"
+              width="335"
+            />
+             </picture>
               <button class="video-play" type="button">
-                <img  src="./images/icons/play.webp" alt="button" width="44" />
+                <img  
+                src="./images/icons/play.webp"
+                alt="button" 
+                width="44" />
               </button>
             </div>
 
