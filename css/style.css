@@ -83,7 +83,8 @@ h6 {
   line-height: 1.16;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-bottom: 74px;
+  /* margin-bottom: 74px; */
+  margin-bottom: 32px;
 }
 img {
   display: block;
@@ -1479,6 +1480,7 @@ text-align: left;
 }
 
 @media screen and (min-width: 768px) {
+
   .container {
    max-width: 768px;
    padding: 0 32px; 
