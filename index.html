@@ -269,9 +269,16 @@
           <div class="video-inner">
             <div class="video-media">
               <picture>
-                <source media="(min-width: 768px)" srcset="./images/Video/tab-video.png, ./images/tab-video@2x.png 2x" />
-                <source media="(max-width: 767px)" srcset="./images/Video/mob-video.png 1x, ./images/Video/mob-video@2x.png 2x" />
-                <img src="./images/Video/mob-video.png" class="video-backgraund" alt="video" />
+                <source media="(min-width: 768px)" 
+                srcset="./images/video/tab-video.png, ./images/video/tab-video@2x.png 2x" />
+
+                <source media="(max-width: 767px)" 
+                srcset="./images/video/mob-video.png 1x, ./images/video/mob-video@2x.png 2x" />
+
+                <img 
+                src="./images/video/mob-video.png" 
+                class="video-backgraund" 
+                alt="video" />
               </picture>
              </picture>
               <button class="video-play" type="button">
@@ -524,13 +531,13 @@
 
     <!-- Subscribe section -->
 
-      <!-- <section class="section-subscribe">
-        <div class="container-subscribe">
+      <section class="section-subscribe">
+        <div class="container container-subscribe">
           <h2 class="section-title-subscribe">Explore our new chocolate first</h2>
           <p class="text-subscribe">From the velvety texture to the rich and complex flavor, our New Chocolate is a true indulgence that will leave you craving more. Made with only the finest ingredients and handcrafted with the utmost care, each piece is a work of art that is sure to please.</p>
           <button class="button-subscribe"type="button">Subscribe</button>
         </div>
-      </section> -->
+      </section>
 
     <!-- END Subscribe section -->
 
@@ -804,18 +811,20 @@
       <img class="sub-img" src="./images/modal/image-subscribe.jpeg" alt="chocolade">
       <div class="modal-subscribe-content">
         <h2 class="title-modal-sub">Explore our <br/>
-           <span class="accent-title">new chocolate</span> first!</h2>
+           <span class="accent-title-modal">new chocolate</span> first!</h2>
 
       <form>
         <div class="sub-item">
           <label class="visually-hidden" for="email-sub">Email subscribe</label>
-        <input
-         class="modal-input-sub" 
-         type="email" id="email-sub" 
-         name="email"
+          <input
+          class="modal-input-sub" 
+          type="email" id="email-sub" 
+          name="email"
           placeholder="Enter you email"
           required />
-        <Button class="button-subscribe-sub" type="submit">Subscribe</Button>
+        
+          <Button class="button-subscribe-sub" type="submit">Submit</Button>
+        
         </div>
       </form>
     

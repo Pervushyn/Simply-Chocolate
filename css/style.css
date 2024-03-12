@@ -215,6 +215,9 @@ fieldset {
   /* align-items: center; */
 }
 .button-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--color-primary-light);
   border: 1px solid currentColor;
   border-radius: 100px;
@@ -716,7 +719,9 @@ transition: background-color 0.2s;
 .reviews-item {
   flex-basis: 100%;
 }
-
+ .reviews-title {
+  margin-bottom: 74px;
+ }
 .reviews-item:not(:first-child) {
   display: none;
 }
@@ -801,20 +806,26 @@ background-color: var(--color-brand);
 
 /* Subscribe section */
 .section-subscribe {
-  padding: 74px 366px;
+  padding: 62px 20px;
   background: rgba(0, 0, 0, 0.2);
-background-image: url(../images/subscribe/subcribe.jpg);
+background-image: url(../images/subscribe/mob_subcribe.png);
 background-size: cover;
 background-position: center;
 }
+@media only screen and (min-resolution: 192dpi) {
+  .section-subscribe {
+    background-image: url(../images/subscribe/mob_subcribe@2x.png) ;
+}
+}
 
 .section-title-subscribe {
+  font-family: Montserat, sans-serif;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.16;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 24px; 
   color: var(--color-primary-light);
@@ -823,13 +834,14 @@ background-position: center;
 }
 
 .text-subscribe {
+  font-family: Montserat, sans-serif;
   color: var(--color-primary-light);
   text-align: center;
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: 0.02em;
   font-weight: 400; 
-  width: 468px;
+  max-width: 326px;
   margin: 0 auto 24px; 
   
 }
@@ -838,15 +850,13 @@ background-position: center;
   margin: 0 auto;
   cursor: pointer;
   text-align: center;
-  padding: 14px 40px;
+  padding: 12px 28px;
   background: var(--color-brand);
   color: var(--color-primary-light);
-  height: 50px;
   border-radius: 50px;
   border: none;
-  margin-top: 32px;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   transition: color 0.2s;
@@ -1307,7 +1317,7 @@ margin-bottom: 8px;
 
 .modal-subscribe {
   position: relative;
-  width: 530px;
+  width: 310px;
   overflow: auto;
   background-color: var(--color-background-light);
   border-radius: 15px;
@@ -1319,7 +1329,7 @@ margin-bottom: 8px;
   width: 100%;
 }
 .modal-subscribe-content {
-  padding: 40px;
+  padding: 32px 24px;
 }
 
 .modal-close-icon-sub {
@@ -1328,31 +1338,31 @@ margin-bottom: 8px;
 
 .title-modal-sub {
   font-family: Montserat, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
-  width: 490px;
   text-align: start;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
   line-height: 1.16;
   text-transform: uppercase;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .sub-item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
 }
 .button-subscribe-sub {
+  position: absolute;
   display: block;
   margin: 0 auto;
   cursor: pointer;
   text-align: center;
-  padding: 14px 40px;
+  padding: 12px 28px;
   background: var(--color-brand);
   color: var(--color-primary-light);
-  height: 50px;
   border-radius: 50px;
   border: none;
   font-family: Montserrat;
@@ -1361,6 +1371,7 @@ margin-bottom: 8px;
   font-weight: 600;
   transition: color 0.2s;
   transition: background-color 0.2s;
+  right: 0px;
 }
 
 .button-subscribe-sub:hover {
@@ -1374,7 +1385,7 @@ margin-bottom: 8px;
   border: 1.5px solid var(--c-modal-border);
  border-radius: 50px;
  background-color: var(--color-background-light);
- padding: 16px 24px;
+ padding: 11px 18px;
  transition: border-color 0.2s;
  outline: none;
 }
@@ -1599,6 +1610,29 @@ text-align: left;
  .list-icons-review {
    margin-bottom: 50px; 
 }
+
+.section-subscribe {
+  /* padding: 74px 366px; */
+  padding: 72px 150px;
+background-image: url(../images/subscribe/tab_subcribe.png);
+}
+@media only screen and (min-resolution: 192dpi) {
+  .section-subscribe {
+    background-image: url(../images/subscribe/tab_subcribe@2x.png) ;
+}
+}
+.container-subscribe {
+  padding: 0;
+}
+.section-title-subscribe {
+  font-size: 24px;
+}
+.text-subscribe {
+  max-width: 468px;
+}
+.button-subscribe {
+  padding: 14px 40px;
+}
 .section-footer {
   padding: 50px 0;
 }
@@ -1739,6 +1773,25 @@ padding-left: 74px;
   width: 24px;
   height: 24px;
 }
+.modal-subscribe {
+  width: 530px;
+}
+.modal-subscribe-content {
+  padding: 40px;
+}
+.title-modal-sub {
+  font-size: 24px;
+  width: 490px;
+  margin-bottom: 28px;
+}
+.button-subscribe-sub {
+  position: static;
+  padding: 14px 40px;
+  height: 50px;
+}
+.modal-input-sub {
+ padding: 16px 24px;
+}
 }
 
 @media screen and (min-width: 1200px) {
@@ -1857,6 +1910,18 @@ padding-left: 74px;
     }
     .list-icons-review {
       margin-bottom: 50px;
+    }
+    .section-subscribe {
+      padding: 74px 366px;
+    background-image: url(../images/subscribe/desk_subcribe.png);
+    }
+    @media only screen and (min-resolution: 192dpi) {
+      .section-subscribesection-subscribe {
+        background-image: url(../images/subscribe/desk_subcribe@2x.png) ;
+    }
+    }
+    .button-subscribe {
+      font-size: 18px;
     }
     .footer-content {
       margin-bottom: 86px;
