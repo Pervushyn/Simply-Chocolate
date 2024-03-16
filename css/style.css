@@ -183,14 +183,14 @@ fieldset {
   padding: 395px 20px 20px;
   background-color: var(--color-background-darck); /*replase with image*/
   border-radius: 30px;
-  background-image: url(../images/hero/hero.png);
+  background-image: url(../images/hero/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media only screen and (min-resolution: 192dpi) {
   .hero-inner {
-    background-image: url(../images/hero/hero@2x.png) ;
+    background-image: url(../images/hero/hero-desk@2x.jpg) ;
 }
 }
 
@@ -557,6 +557,8 @@ letter-spacing: 0.02em;
 .produkts-item {
   flex-basis: 100%;
   background-color: var(--color-background-light);
+  text-align: center;
+  justify-content: center;
 }
 .produkts-item:not(:first-child) {
   display: none;
@@ -564,9 +566,12 @@ letter-spacing: 0.02em;
 .produkt-image {
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
   margin-bottom: 8px;
-  
+ 
+}
+
+.produkt-img {
+  margin: 0 auto; 
 }
 .produkt {
 border: 1px solid rgba(17, 17, 17, 0.10);
@@ -804,13 +809,13 @@ background-color: var(--color-brand);
 .section-subscribe {
   padding: 62px 20px;
   background: rgba(0, 0, 0, 0.2);
-background-image: url(../images/subscribe/mob_subcribe.png);
+background-image: url(../images/subscribe/mob_subcribe.jpg);
 background-size: cover;
 background-position: center;
 }
 @media only screen and (min-resolution: 192dpi) {
   .section-subscribe {
-    background-image: url(../images/subscribe/mob_subcribe@2x.png) ;
+    background-image: url(../images/subscribe/mob_subcribe@2x.jpg) ;
 }
 }
 
@@ -1507,12 +1512,12 @@ text-align: left;
 }
   .hero-inner {
     padding: 670px 40px 40px;
-    background-image: url(../images/hero/hero-desk.jpeg);
+    background-image: url(../images/hero/hero-tab.jpg);
   }
   
   @media only screen and (min-resolution: 192dpi) {
     .hero-inner {
-      background-image: url(../images/hero/hero-tab@2x.png) ;
+      background-image: url(../images/hero/hero-tab@2x.jpg) ;
   }
   }
   .hero-title {
@@ -1567,6 +1572,9 @@ text-align: left;
   margin-bottom: 28px;
   }
   
+  .produkt-img {
+    width: 344px;
+  }
   .produkts-list {
     gap: 24px 18px;
   }
@@ -1576,7 +1584,9 @@ text-align: left;
   .produkts-item:not(:first-child) {
     display: flex;
   }
-
+  .produkts-item:first-child {
+    display: flex;
+  }
   .sellers-item {
     flex-basis: calc((100% - 16px) / 2);
   }
@@ -1610,11 +1620,11 @@ text-align: left;
 .section-subscribe {
   /* padding: 74px 366px; */
   padding: 72px 150px;
-background-image: url(../images/subscribe/tab_subcribe.png);
+background-image: url(../images/subscribe/tab_subcribe.jpg);
 }
 @media only screen and (min-resolution: 192dpi) {
   .section-subscribe {
-    background-image: url(../images/subscribe/tab_subcribe@2x.png) ;
+    background-image: url(../images/subscribe/mob_subcribe@2x.jpg) ;
 }
 }
 .container-subscribe {
@@ -1822,11 +1832,11 @@ padding-left: 74px;
 }
 .hero-inner {
   padding: 380px 40px 40px;
-  background-image: url(../images/hero/hero-desk.jpeg);
+  background-image: url(../images/hero/hero-desk.jpg);
 }
 @media only screen and (min-resolution: 192dpi) {
   .hero-inner {
-    background-image: url(../images/hero/hero-desk@2x.png) ;
+    background-image: url(../images/hero/hero-desk@2x.jpg) ;
 }
 }
    .advantages-list {
@@ -1909,11 +1919,11 @@ padding-left: 74px;
     }
     .section-subscribe {
       padding: 74px 366px;
-    background-image: url(../images/subscribe/desk_subcribe.png);
+    background-image: url(../images/subscribe/desk_subcribe.jpg);
     }
     @media only screen and (min-resolution: 192dpi) {
       .section-subscribesection-subscribe {
-        background-image: url(../images/subscribe/desk_subcribe@2x.png) ;
+        background-image: url(../images/subscribe/desk_subcribe@2x.jpg) ;
     }
     }
     .button-subscribe {
